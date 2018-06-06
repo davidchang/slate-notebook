@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { Editor } from 'slate-react';
 import { Value } from 'slate';
-import PasteLinkify from 'slate-paste-linkify';
 import TitleInput from './common/TitleInput';
 import NoteActionsAndMetadata from './common/NoteActionsAndMetadata';
+import Editor from './common/Editor';
 
 const initialValue = Value.fromJSON({
   document: {
@@ -25,12 +24,6 @@ const initialValue = Value.fromJSON({
     ],
   },
 });
-
-const plugins = [
-  PasteLinkify({
-    type: 'link',
-  }),
-];
 
 const initialState = {
   body: initialValue,
@@ -68,7 +61,7 @@ class Main extends Component {
           enableSaveButton={enableSaveButton}
         />
         <TitleInput titleValue={title} onTitleChange={this.onTitleChange} />
-        <Editor value={body} onChange={this.onChange} plugins={plugins} />
+        <Editor value={body} onChange={this.onChange} />
       </div>
     );
   }

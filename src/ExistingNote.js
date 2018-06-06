@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Editor } from 'slate-react';
 import { Value } from 'slate';
 import TitleInput from './common/TitleInput';
 import NoteActionsAndMetadata from './common/NoteActionsAndMetadata';
+import Editor from './common/Editor';
 
 class Main extends Component {
   state = {

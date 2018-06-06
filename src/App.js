@@ -5,10 +5,12 @@ import ExistingNote from './ExistingNote';
 import Sidebar from './Sidebar';
 import storage from './storage';
 
+const notes = storage.retrieveNotes();
+
 class App extends Component {
   state = {
-    notes: storage.retrieveNotes(),
-    activeNoteID: null,
+    notes: notes,
+    activeNoteID: notes.length ? notes[0].id : null,
   };
 
   onSaveNote = ({ title, body, id }) => {
