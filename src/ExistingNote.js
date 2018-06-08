@@ -59,7 +59,7 @@ class Main extends Component {
           enableSaveButton={enableSaveButton}
         />
         <TitleInput titleValue={title} onTitleChange={this.onTitleChange} />
-        <Editor value={body} onChange={this.onChange} />
+        <Editor value={body} onChange={this.onChange} onSave={this.onSave} />
       </div>
     );
   }

@@ -3585,7 +3585,11 @@ is-glob@^4.0.0:
   dependencies:
     is-extglob "^2.1.1"
 
-is-hotkey@^0.1.1:
+is-hotkey@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/is-hotkey/-/is-hotkey-0.0.3.tgz#3713fea135f86528c87cf39810b3934e45151390"
+
+is-hotkey@^0.1.1, is-hotkey@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/is-hotkey/-/is-hotkey-0.1.2.tgz#aeda5e4f542284700ae18b46980fb0637c021198"
 
@@ -6236,6 +6240,13 @@ slate-hotkeys@^0.1.2:
   dependencies:
     is-hotkey "^0.1.1"
     slate-dev-environment "^0.1.2"
+
+slate-mark-hotkeys@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/slate-mark-hotkeys/-/slate-mark-hotkeys-0.1.1.tgz#6e292349b7ee262680a67f969c0ae95dca10ccf5"
+  dependencies:
+    is-hotkey "^0.0.3"
+    type-of "^2.0.1"
 
 slate-paste-linkify@^0.5.1:
   version "0.5.1"
