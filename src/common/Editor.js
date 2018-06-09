@@ -1,22 +1,20 @@
 import React, { Component } from 'react';
-import PasteLinkify from 'slate-paste-linkify';
+import AutoReplaceIframe, { renderNodeHOF } from 'slate-auto-replace-iframe';
 import MarkHotkeys, { renderMark } from 'slate-mark-hotkeys';
 import { Editor } from 'slate-react';
 import isHotkey from 'is-hotkey';
 
 const isSaveHotkey = isHotkey('mod+s');
 
-const plugins = [
-  PasteLinkify({
-    type: 'link',
-    hrefProperty: 'url',
-    collapseTo: 'end',
-  }),
-  MarkHotkeys(),
-];
+const plugins = [AutoReplaceIframe(), MarkHotkeys()];
 
 class CommonEditor extends Component {
   renderNode = props => {
+    const autoReplaceRenderNode = renderNodeHOF()(props);
+    if (autoReplaceRenderNode) {
+      return autoReplaceRenderNode;
+    }
+
     const { node, attributes, children } = props;
     switch (node.type) {
       case 'link':

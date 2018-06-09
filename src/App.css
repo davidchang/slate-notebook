@@ -7,9 +7,9 @@
 
 .App {
   display: flex;
-  height: 100%;
   margin: 0 auto;
   max-width: 1920px;
+  min-height: 100%;
 }
 
 .App-sidebar {

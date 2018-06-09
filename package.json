@@ -10,8 +10,8 @@
     "react-dom": "^16.4.0",
     "react-scripts": "1.1.4",
     "slate": "^0.33.6",
+    "slate-auto-replace-iframe": "^0.1.1",
     "slate-mark-hotkeys": "^0.1.1",
-    "slate-paste-linkify": "^0.5.1",
     "slate-react": "^0.12.6",
     "store2": "^2.7.0"
   },
