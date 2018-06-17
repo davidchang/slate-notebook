@@ -1,20 +1,28 @@
 import React, { Component } from 'react';
-import AutoReplaceIframe, { renderNodeHOF } from 'slate-auto-replace-iframe';
-import MarkHotkeys, { renderMark } from 'slate-mark-hotkeys';
+import PasteLinkify from 'slate-paste-linkify';
+import AutoReplaceIframe from 'slate-auto-replace-iframe';
+import MarkHotkeys from 'slate-mark-hotkeys';
+import BibleReferences from 'slate-bible-references';
 import { Editor } from 'slate-react';
 import isHotkey from 'is-hotkey';
 
 const isSaveHotkey = isHotkey('mod+s');
 
-const plugins = [AutoReplaceIframe(), MarkHotkeys()];
+const plugins = [
+  PasteLinkify({
+    type: 'link',
+    hrefProperty: 'url',
+    collapseTo: 'end',
+  }),
+  AutoReplaceIframe(),
+  MarkHotkeys(),
+  BibleReferences({
+    esvAPIKey: '955cf1a9994ebdf2add173f69affb8814d3d8dd0',
+  }),
+];
 
 class CommonEditor extends Component {
   renderNode = props => {
-    const autoReplaceRenderNode = renderNodeHOF()(props);
-    if (autoReplaceRenderNode) {
-      return autoReplaceRenderNode;
-    }
-
     const { node, attributes, children } = props;
     switch (node.type) {
       case 'link':
@@ -45,7 +53,6 @@ class CommonEditor extends Component {
         onChange={onChange}
         onKeyDown={this.onKeyDown}
         plugins={plugins}
-        renderMark={renderMark}
         renderNode={this.renderNode}
       />
     );

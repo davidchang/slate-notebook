@@ -2,6 +2,16 @@
 # yarn lockfile v1
 
 
+"@omysoul/bible-langs@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@omysoul/bible-langs/-/bible-langs-0.0.2.tgz#0ba2624fd92fc604c607d8fbdd8901f646fbe7bc"
+
+"@omysoul/bible-references@^0.0.33":
+  version "0.0.33"
+  resolved "https://registry.yarnpkg.com/@omysoul/bible-references/-/bible-references-0.0.33.tgz#75c2881efb88f1f653a769ff2ab2c50f8bbaa6b9"
+  dependencies:
+    "@omysoul/bible-langs" "^0.0.2"
+
 abab@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/abab/-/abab-1.0.4.tgz#5faad9c2c07f60dd76770f71cf025b62a63cfd4e"
@@ -3712,6 +3722,10 @@ is-typedarray@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/is-typedarray/-/is-typedarray-1.0.0.tgz#e479c80858df0c1b11ddda6940f96011fcda4a9a"
 
+is-url@^1.2.2:
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/is-url/-/is-url-1.2.4.tgz#04a4df46d28c4cff3d73d01ff06abeb318a1aa52"
+
 is-utf8@^0.2.0:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/is-utf8/-/is-utf8-0.2.1.tgz#4b0da1442104d1b336340e80797e865cf39f7d72"
@@ -6214,15 +6228,21 @@ slash@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"
 
-slate-auto-replace-iframe@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/slate-auto-replace-iframe/-/slate-auto-replace-iframe-0.1.1.tgz#298f810065b1440727fcb6f2cdc437f799e911e3"
+slate-auto-replace-iframe@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/slate-auto-replace-iframe/-/slate-auto-replace-iframe-0.2.2.tgz#e1bbc7b4005df9ec0c622819ec3c623a1f2351cb"
 
 slate-base64-serializer@^0.2.31:
   version "0.2.31"
   resolved "https://registry.yarnpkg.com/slate-base64-serializer/-/slate-base64-serializer-0.2.31.tgz#802effe887b429d4072dbb373bf5755b83d3f4f1"
   dependencies:
     isomorphic-base64 "^1.0.2"
+
+slate-bible-references@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/slate-bible-references/-/slate-bible-references-0.1.0.tgz#495eb62b9cd02cb245d629be088871401a383e46"
+  dependencies:
+    "@omysoul/bible-references" "^0.0.33"
 
 slate-dev-environment@^0.1.2:
   version "0.1.2"
@@ -6241,12 +6261,19 @@ slate-hotkeys@^0.1.2:
     is-hotkey "^0.1.1"
     slate-dev-environment "^0.1.2"
 
-slate-mark-hotkeys@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/slate-mark-hotkeys/-/slate-mark-hotkeys-0.1.1.tgz#6e292349b7ee262680a67f969c0ae95dca10ccf5"
+slate-mark-hotkeys@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/slate-mark-hotkeys/-/slate-mark-hotkeys-0.2.0.tgz#00d8b0f8a2885abc546b5db49bc5b35e93c65978"
   dependencies:
     is-hotkey "^0.0.3"
     type-of "^2.0.1"
+
+slate-paste-linkify@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/slate-paste-linkify/-/slate-paste-linkify-0.5.1.tgz#6988a76f121fd1fa26fed06a93892f91208c37df"
+  dependencies:
+    is-url "^1.2.2"
+    to-pascal-case "^1.0.0"
 
 slate-plain-serializer@^0.5.12:
   version "0.5.12"
@@ -6745,11 +6772,21 @@ to-fast-properties@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/to-fast-properties/-/to-fast-properties-1.0.3.tgz#b83571fa4d8c25b82e231b06e3a3055de4ca1a47"
 
+to-no-case@^1.0.0:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/to-no-case/-/to-no-case-1.0.2.tgz#c722907164ef6b178132c8e69930212d1b4aa16a"
+
 to-object-path@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/to-object-path/-/to-object-path-0.3.0.tgz#297588b7b0e7e0ac08e04e672f85c1f4999e17af"
   dependencies:
     kind-of "^3.0.2"
+
+to-pascal-case@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/to-pascal-case/-/to-pascal-case-1.0.0.tgz#0bbdc8df448886ba01535e543327048d0aa1ce78"
+  dependencies:
+    to-space-case "^1.0.0"
 
 to-regex-range@^2.1.0:
   version "2.1.1"
@@ -6766,6 +6803,12 @@ to-regex@^3.0.1, to-regex@^3.0.2:
     extend-shallow "^3.0.2"
     regex-not "^1.0.2"
     safe-regex "^1.1.0"
+
+to-space-case@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/to-space-case/-/to-space-case-1.0.0.tgz#b052daafb1b2b29dc770cea0163e5ec0ebc9fc17"
+  dependencies:
+    to-no-case "^1.0.0"
 
 toposort@^1.0.0:
   version "1.0.7"
