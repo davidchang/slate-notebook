@@ -8,6 +8,7 @@ export default function TitleInput({ titleValue, onTitleChange }) {
       value={titleValue}
       placeholder="Note Title"
       onChange={onTitleChange}
+      maxLength="70"
     />
   );
 }

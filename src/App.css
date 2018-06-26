@@ -54,3 +54,7 @@
 .NoteMetadataContainer-metadata {
   vertical-align: bottom;
 }
+
+.EditorContainer {
+  max-width: 700px;
+}

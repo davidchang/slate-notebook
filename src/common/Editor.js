@@ -48,13 +48,15 @@ class CommonEditor extends Component {
   render() {
     const { value, onChange } = this.props;
     return (
-      <Editor
-        value={value}
-        onChange={onChange}
-        onKeyDown={this.onKeyDown}
-        plugins={plugins}
-        renderNode={this.renderNode}
-      />
+      <div className="EditorContainer">
+        <Editor
+          value={value}
+          onChange={onChange}
+          onKeyDown={this.onKeyDown}
+          plugins={plugins}
+          renderNode={this.renderNode}
+        />
+      </div>
     );
   }
 }
