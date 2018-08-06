@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "antd": "^3.8.0",
     "gh-pages": "^1.2.0",
     "immutable": "^3.8.2",
     "is-hotkey": "^0.1.2",
@@ -12,8 +13,7 @@
     "slate": "^0.33.6",
     "slate-auto-replace-iframe": "^0.2.2",
     "slate-bible-references": "^0.1.0",
-    "slate-mark-hotkeys": "^0.2.0",
-    "slate-paste-linkify": "^0.5.1",
+    "slate-md-editor": "^0.4.3",
     "slate-react": "^0.12.6",
     "store2": "^2.7.0"
   },
